@@ -41,10 +41,16 @@ function exclaim(str) {
    return newStr;
 }
 
-function reverse() {
+function reverse(str) {newStr= ''
+for (i=1;i<=str.length;i++){
+  if(str[i] !== ' ' ){
+  newStr =  newStr +  str[str.length - i]
+  }
+}
+  return newStr;
 }
 
-function crazyCase2ReturnOfCrazyCase() {
+function crazyCase2ReturnOfCrazyCase(str) {
 }
 
 function titleCase() {
