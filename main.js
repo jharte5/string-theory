@@ -27,7 +27,18 @@ function ciEmailify(str) {
   return differentStr.toLowerCase
 }
 
-function exclaim() {
+function exclaim(str) {
+  let newStr= ''
+ for (i = 0; i < str.length;i++) {
+   if (str[i] === '?') {
+   newStr = newStr + '!'
+   } else if(str[i] === '.') {
+   newStr = newStr + '!'
+   } else {
+   newStr = newStr + str[i]
+   }
+ }
+   return newStr;
 }
 
 function reverse() {
