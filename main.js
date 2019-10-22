@@ -13,18 +13,27 @@ function crazyCase(str) {
 }
 
 function ciEmailify(str) {
-  let email = '@codeimmersives.com';
-
-  for (let i = 0; i < str.length; i++) {
-    if (str.includes('')) {
-     str.replace('', '.');
-     email = differentStr + email;
-    } 
-    if (differentStr !== differentStr.toLowerCase) {
-    }
-  }
-  return email
-  return differentStr.toLowerCase
+  let newStr= ''
+str = str.toLowerCase()
+for (i=0; i<str.length; i++) {
+ if (str[i] === " ") {
+ newStr = newStr + '.'
+ } else {
+ newStr = newStr + str[i]
+ }
+ }
+ return newStr + '@codeimmersives.com'
+  // let email = '';
+  // for (let i = 0; i < str.length; i++) {
+  //   while (str.includes('')) {
+  //    str.replace('', '.');
+  //   } 
+  //   // email = name.replace(' ', '.');
+  //   // if (differentStr !== differentStr.toLowerCase) {
+  //   // }
+  // }
+  // return email + '@codeimmersives.com';
+  // return differentStr.toLowerCase
 }
 
 function exclaim(str) {
@@ -42,7 +51,7 @@ function exclaim(str) {
 }
 
 function reverse(str) {newStr= ''
-for (i=1;i<=str.length;i++){
+for (i = 1; i <= str.length; i++){
   if(str[i] !== ' ' ){
   newStr =  newStr +  str[str.length - i]
   }
@@ -53,10 +62,42 @@ for (i=1;i<=str.length;i++){
 function crazyCase2ReturnOfCrazyCase(str) {
 }
 
-function titleCase() {
+function titleCase(str) {
+  let newStr= ''
+for (i = 0; i <str.length; i++){
+ if(i === 0){
+   newStr = newStr + str[0].toUpperCase()
+ } else{
+ if (str[i - 1] === ' ') {
+ newStr = newStr + str[i].toUpperCase()}
+ else {
+ newStr = newStr + str[i].toLowerCase()
+   }
+   }
+ }
+   return newStr;
 }
 
-function onlyVowels() {
+function onlyVowels(str) {
+  let newStr= ''
+  for (i=0;i<str.length;i++){
+    if('aeiou'.includes(str[i]) || 'AEIOU'.includes(str[i])) {
+      newStr = newStr + str[i]
+  }
+ }
+  return newStr;
+  
+  
+  // let vowels = '';
+  // for (let i = 0; i < str.length; i++) {
+  //   if ( str[i].includes('a')
+  //   ||str[i].includes('e')
+  //   ||str[i].includes('i')
+  //   ||str[i].includes('o')
+  //   ||str[i].includes('u')
+  //   vowels = vowels + str[i]);
+  // }
+  // return vowels;
 }
 
 function crazyCase3SonOfCrazyCase() {
